@@ -10,7 +10,7 @@ AutoVettura::AutoVettura( const char* tipo, const char* marca, const char* model
 
 }
 
-AutoVettura::AutoVettura( const AutoVettura &a ) {
+AutoVettura::AutoVettura( const AutoVettura &a ) : Veicolo(a) {
 
 	Tipo = new char[strlen(a.Tipo)+1] ;
 	Marca = new char[strlen(a.Marca)+1] ;

@@ -5,6 +5,8 @@
 
 class Veicolo {
 
+	friend std::ostream& operator<<( std::ostream& , const Veicolo& ) ;
+	friend std::istream& operator>>( std::istream& , Veicolo& ) ;
 
 protected :
 
@@ -22,6 +24,7 @@ public :
 
 	char* getTipo() const { return Tipo ; } ;
 	char* getMarca() const { return Marca ; } ;
+	bool operator==( const Veicolo&) const ;
 
 
 	virtual float calc_pedaggio() const = 0 ;
@@ -29,3 +32,5 @@ public :
 	virtual ~Veicolo() ;
 
 };
+
+#endif

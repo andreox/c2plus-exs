@@ -13,7 +13,7 @@ protected :
 
 	char * Modello ;
 	int Classe ;
-	float * pedaggi { 1, 1.60, 2.05, 2.55, 3.00, 3.45, 3.90} ;
+	const float pedaggi[7] = { 1, 1.60, 2.05, 2.55, 3.00, 3.45, 3.90 } ;
 
 
 public :
@@ -39,3 +39,5 @@ public :
 	virtual ~AutoVettura() ;
 
 };
+
+#endif

@@ -61,4 +61,24 @@ Veicolo::~Veicolo() {
 	delete [] Tipo ;
 
 }
+
+bool Veicolo::operator==( const Veicolo &v) const {
+
+	if ( strcmp( Tipo, v.Tipo ) && strcmp( Marca, v.Marca ) ) return true ;
+
+	return false ;
+}
+std::ostream& operator<<( std::ostream &out , const Veicolo &v ) {
+
+	std::cout << v.Tipo << " " << v.Marca << std::endl ;
+
+	return out ;
+}
+
+std::istream& operator>>( std::istream &in, Veicolo &v ) {
+
+	std::cin >> v.Tipo ;
+	std::cin >> v.Marca ;
+
+	return in ;
 }
