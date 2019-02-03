@@ -1,6 +1,7 @@
 #include "AutoVettura.h"
 #include "Lista.h"
 #include "Veicolo.h"
+#include "NoAuth.h"
 #include <iostream>
 #include <fstream>
 
@@ -13,7 +14,18 @@ int main( int argc, char** argv ) {
 	AutoVettura * range = new AutoVettura("Auto","RANGE ROVER","VELAR",4) ;
 
 	Lista L ;
-	L.append(audi) ;
+
+	try {
+		if ( L.append(audi) )
+			cout << "Inserimento riuscito" << endl ;
+		cout << "Inserimento fallito" << endl ;
+	}
+
+	catch ( NoAuth &a ) {
+
+		cout << a.what() << " " << a.value() << endl ;
+
+	}
 	L.append(benz) ;
 	L.append(range) ;
 

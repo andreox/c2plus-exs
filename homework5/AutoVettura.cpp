@@ -83,7 +83,10 @@ bool AutoVettura::operator>( const AutoVettura &a ) const {
 
 float AutoVettura::calc_pedaggio() const {
 
+	if ( Classe >= 2 && Classe <= 8 )
 	return pedaggi[(Classe-2)] ;
+
+	return -1 ;
 
 }
 
