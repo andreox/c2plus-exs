@@ -1,6 +1,6 @@
 #ifndef GARAGE_H
 #define GARAGE_H
-#define MAX 20
+#define MAX 6
 
 #include "Veicolo.h"
 

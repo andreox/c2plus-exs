@@ -6,5 +6,7 @@ NT3 HARLEY
 Benzina
 NT4 SUZUKI
 Diesel
-NT3 HARLEY
-Benzina
+NT4 SUZUKI
+Diesel
+NT4 SUZUKI
+Diesel

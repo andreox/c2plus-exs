@@ -29,8 +29,18 @@ int main( int argc, char** argv ) {
 	cout << g.push( v[1] ) << endl ;
 	cout << g.push( v[2] ) << endl ;
 	cout << g.push( v[3] )  << endl ;
+	cout << g.push( v[3] )  << endl ;
+	cout << g.push( v[3] )  << endl ;
 	Motocicletta m3 = m1 ;
-	cout << g.push( &m3 ) << endl ;
+
+	try {
+		cout << g.push( &m3 ) << endl ;
+	}
+
+	catch( NoAuth &n ) {
+
+		cout << n.getMessage() << " " << n.getError() << endl ; ;
+	}
 
 	Veicolo *v2 = g.pop(2) ;
 	cout << *v2 << endl ;
