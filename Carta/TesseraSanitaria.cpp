@@ -62,7 +62,7 @@ namespace Cartansp {
 
 	bool TesseraSanitaria::Check( const char* s ) const {
 
-		if ( strcmp( CF, s) ) return true ;
+		if ( strcmp( CF, s) == 0 ) return true ;
 		return false ;
 
 	}

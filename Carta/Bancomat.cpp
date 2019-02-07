@@ -46,7 +46,7 @@ namespace Cartansp {
 
 		if ( attivato ) {
 
-			if ( strcmp( Pin, c ) ) return true ;
+			if ( strcmp( Pin, c ) == 0 ) return true ;
 
 		}
 

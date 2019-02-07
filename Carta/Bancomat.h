@@ -31,6 +31,8 @@ namespace Cartansp {
 		Bancomat( const Bancomat& ) ;
 		const Bancomat& operator=( const Bancomat& ) ;
 
+		void setDataScadenza( const Data s ) { DataScadenza = s ; } ;
+		const Data getDataScadenza() const { return DataScadenza ; } ;
 
 		void Attiva() ;
 		virtual bool Check( const char* ) const ;
