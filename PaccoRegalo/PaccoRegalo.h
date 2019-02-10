@@ -28,7 +28,7 @@ namespace Pacco {
 
 		void setCod( const int c ) { cod = c ; } ;
 		void setWeight( const float w ) { weight = w ; } ;
-		inline void setAddress( const char* a ) { delete [] address ; address = new char[strlen(a+1)] ; strcpy(address,a) ; } ;
+		inline void setAddress( const char* a ) { delete [] address ; address = new char[strlen(a)+1] ; strcpy(address,a) ; } ;
 
 		const int getCod() const { return cod ; } ;
 		const float getWeight() const { return weight ; } ;
